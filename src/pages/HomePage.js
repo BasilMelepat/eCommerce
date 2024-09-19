@@ -30,11 +30,11 @@ const HomePage = () => {
         {products.map((product) => (
           <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={product.image} style={{ height: '200px', objectFit: 'cover' }} />
+              <Card.Img variant="top" src={product.image}/>
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
-                <Card.Text>${product.price}</Card.Text>
-                <Link to={`/product/${product.id}`} className="btn btn-primary me-2">View Details</Link>
+                <Card.Text>₹{product.price}</Card.Text>
+                <Link to={`/product/${product.id}`} className="btn btn-primary">View Details</Link>
                 <Button variant="success" onClick={() => dispatch(addToCart(product))}>Add to Cart</Button>
               </Card.Body>
             </Card>

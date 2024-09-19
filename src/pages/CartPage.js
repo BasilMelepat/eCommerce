@@ -28,18 +28,18 @@ const CartPage = () => {
               {items.map((item) => (
                 <tr key={item.id}>
                   <td>{item.title}</td>
-                  <td>${item.price}</td>
+                  <td>₹{item.price}</td>
                   <td>{item.quantity}</td>
-                  <td>${(item.price * item.quantity).toFixed(2)}</td>
+                  <td>₹{(item.price * item.quantity).toFixed(2)}</td>
                   <td>
-                    <Button variant="primary" size="sm" onClick={() => dispatch(addToCart(item))}>+</Button>
-                    <Button variant="danger" size="sm" className="ms-2" onClick={() => dispatch(removeFromCart(item.id))}>-</Button>
+                    <Button variant="primary" size="sm" className="add" onClick={() => dispatch(addToCart(item))}>+</Button>
+                    <Button variant="danger" size="sm" className="minus" onClick={() => dispatch(removeFromCart(item.id))}>-</Button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          <h3>Total: ${totalAmount.toFixed(2)}</h3>
+          <h3>Total: ₹{totalAmount.toFixed(2)}</h3>
         </>
       )}
     </div>

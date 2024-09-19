@@ -22,7 +22,7 @@ const ProductDetailPage = () => {
       </Col>
       <Col md={6}>
         <h1>{product.title}</h1>
-        <h2>${product.price}</h2>
+        <h2>₹{product.price}</h2>
         <p>{product.description}</p>
         <Button variant="primary" onClick={() => dispatch(addToCart(product))}>
           Add to Cart

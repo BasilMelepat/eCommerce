@@ -10,9 +10,9 @@ const Footer = () => {
           <Col md={4}>
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><Link to="/">Home</Link></li>
               <li><Link to="/category/electronics">Electronics</Link></li>
-              <li><Link to="/category/clothing">Clothing</Link></li>
+              <li><Link to="/category/jewelery">Jewelary</Link></li>
+              <li><Link to="/category/toys">Toys</Link></li>
             </ul>
           </Col>
           <Col md={4}>
@@ -30,7 +30,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col className="text-center mt-3">
-            <p>&copy; 2024 E-commerce Store. All rights reserved.</p>
+            <p>&copy; 2K24 Basil's E-commerce Store. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

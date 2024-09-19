@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const NotFoundPage = () => {
+const PageNotFound = () => {
   return (
     <Container className="mt-5">
       <Row className="justify-content-center">
@@ -19,4 +19,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default PageNotFound;

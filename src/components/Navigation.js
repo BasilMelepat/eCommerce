@@ -10,13 +10,14 @@ const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to="/">E-commerce Store</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Basil's E-commerce Store</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/category/electronics">Electronics</Nav.Link>
-            <Nav.Link as={Link} to="/category/clothing">Clothing</Nav.Link>
+            <Nav.Link as={Link} to="/category/jewelery">Jewelry</Nav.Link>
+            <Nav.Link as={Link} to="/category/toys">Toys</Nav.Link>
           </Nav>
           <Nav>
             {user ? (

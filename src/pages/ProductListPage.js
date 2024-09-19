@@ -25,7 +25,13 @@ const ProductListPage = () => {
     return <div>Error: {error}</div>;
   }
 
-  const filteredProducts = products.filter(product => product.category === categoryId);
+  const filteredProducts = products.filter(product => 
+    product.category.toLowerCase().replace(/[^a-zA-Z0-9]/g, '') === categoryId.toLowerCase()
+  );
+
+  if (filteredProducts.length === 0) {
+    return <div>No products found in this category.</div>;
+  }
 
   return (
     <div>
@@ -34,11 +40,11 @@ const ProductListPage = () => {
         {filteredProducts.map((product) => (
           <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={product.image} style={{ height: '200px', objectFit: 'cover' }} />
+              <Card.Img variant="top" src={product.image} style={{ height: '200px', objectFit: 'contain' }} />
               <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>${product.price}</Card.Text>
-                <Link to={`/product/${product.id}`} className="btn btn-primary me-2">View Details</Link>
+                <Card.Title className="card-title">{product.title}</Card.Title>
+                <Card.Text>₹{product.price.toFixed(2)}</Card.Text>
+                <Link to={`/product/${product.id}`} className="btn btn-primary">View Details</Link>
                 <Button variant="success" onClick={() => dispatch(addToCart(product))}>Add to Cart</Button>
               </Card.Body>
             </Card>

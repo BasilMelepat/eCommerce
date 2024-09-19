@@ -10,7 +10,7 @@ import HomePage from './pages/HomePage';
 import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
-import NotFoundPage from './pages/NotFoundPage';
+import PageNotFound from './pages/PageNotFound';
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
               <Route path="/category/:categoryId" element={<ProductListPage />} />
               <Route path="/product/:productId" element={<ProductDetailPage />} />
               <Route path="/cart" element={<CartPage />} />
-              <Route path="*" element={<NotFoundPage />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Container>
           <Footer />

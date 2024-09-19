@@ -12,7 +12,6 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, you would validate the credentials here
     dispatch(login({ name: email.split('@')[0] }));
     navigate('/');
   };
