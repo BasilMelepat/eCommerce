@@ -1,0 +1,22 @@
+.product-image {
+    max-height: 400px;
+    object-fit: contain;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }

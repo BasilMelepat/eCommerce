@@ -1,0 +1,25 @@
+.cart-table {
+    margin-top: 2rem;
+  }
+  
+  .cart-table th {
+    font-weight: bold;
+  }
+  
+  .cart-table .product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: right;
+  }
+  
+  .quantity-input {
+    width: 60px;
+    text-align: center;
+  }

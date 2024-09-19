@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.css';
+import './styles/navigation.css';
+import './styles/productCard.css';
+import './styles/productDetail.css';
+import './styles/cart.css';
+import './styles/footer.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
